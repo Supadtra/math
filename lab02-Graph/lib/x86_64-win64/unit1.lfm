@@ -1,0 +1,334 @@
+object Form1: TForm1
+  Left = 315
+  Height = 476
+  Top = 152
+  Width = 769
+  Caption = 'Form1'
+  ClientHeight = 476
+  ClientWidth = 769
+  LCLVersion = '1.8.4.0'
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 476
+    Top = 0
+    Width = 661
+    ActivePage = TabSheet3
+    Align = alCustom
+    TabIndex = 2
+    TabOrder = 0
+    object TabSheet1: TTabSheet
+      Caption = 'Input Data'
+      ClientHeight = 448
+      ClientWidth = 653
+      object ScrollBox2: TScrollBox
+        Left = 0
+        Height = 448
+        Top = 0
+        Width = 653
+        HorzScrollBar.Page = 75
+        VertScrollBar.Page = 50
+        Align = alClient
+        ClientHeight = 444
+        ClientWidth = 649
+        TabOrder = 0
+        object StringGrid1: TStringGrid
+          Left = 0
+          Height = 444
+          Top = 0
+          Width = 649
+          Align = alClient
+          TabOrder = 0
+        end
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Graph'
+      ClientHeight = 448
+      ClientWidth = 653
+      object ScrollBox3: TScrollBox
+        Left = 0
+        Height = 448
+        Top = 0
+        Width = 653
+        HorzScrollBar.Page = 75
+        VertScrollBar.Page = 50
+        Align = alClient
+        ClientHeight = 444
+        ClientWidth = 649
+        TabOrder = 0
+        object Chart1: TChart
+          Left = 0
+          Height = 444
+          Top = 0
+          Width = 649
+          AxisList = <          
+            item
+              Marks.LabelBrush.Style = bsClear
+              Minors = <>
+              Title.LabelFont.Orientation = 900
+              Title.LabelBrush.Style = bsClear
+            end          
+            item
+              Alignment = calBottom
+              Marks.LabelBrush.Style = bsClear
+              Minors = <>
+              Title.LabelBrush.Style = bsClear
+            end>
+          Foot.Brush.Color = clBtnFace
+          Foot.Font.Color = clBlue
+          Title.Brush.Color = clBtnFace
+          Title.Font.Color = clBlue
+          Title.Text.Strings = (
+            'TAChart'
+          )
+          Align = alClient
+          object Chart1LineSeries1: TLineSeries
+            LinePen.Color = clRed
+            ShowPoints = True
+          end
+          object Chart1LineSeries2: TLineSeries
+            LinePen.Color = clBlue
+            ShowPoints = True
+          end
+        end
+      end
+    end
+    object TabSheet3: TTabSheet
+      Caption = '3D Visualization'
+      ClientHeight = 448
+      ClientWidth = 653
+      object ScrollBox4: TScrollBox
+        Left = 0
+        Height = 448
+        Top = 0
+        Width = 653
+        HorzScrollBar.Page = 75
+        VertScrollBar.Page = 50
+        Align = alClient
+        ClientHeight = 444
+        ClientWidth = 649
+        TabOrder = 0
+        object OpenGLControl1: TOpenGLControl
+          Left = 0
+          Height = 444
+          Top = 0
+          Width = 649
+          Align = alClient
+          OnClick = OpenGLControl1Click
+          OnMouseDown = OpenGLControl1MouseDown
+          OnMouseMove = OpenGLControl1MouseMove
+          OnMouseUp = OpenGLControl1MouseUp
+          OnPaint = OpenGLControl1Paint
+          OnResize = OpenGLControl1Resize
+        end
+      end
+    end
+  end
+  object ScrollBox1: TScrollBox
+    Left = 564
+    Height = 476
+    Top = 0
+    Width = 205
+    HorzScrollBar.Page = 200
+    VertScrollBar.Page = 426
+    Align = alRight
+    ClientHeight = 472
+    ClientWidth = 201
+    TabOrder = 1
+    object GroupBox1: TGroupBox
+      Left = 0
+      Height = 410
+      Top = 16
+      Width = 200
+      Caption = 'Parameter Setting'
+      ClientHeight = 390
+      ClientWidth = 196
+      TabOrder = 0
+      object FloatSpinEditL: TFloatSpinEdit
+        Left = 72
+        Height = 23
+        Top = 24
+        Width = 74
+        Increment = 1
+        MaxValue = 100
+        MinValue = 0
+        OnChange = Button1Click
+        TabOrder = 0
+        Value = 0.2
+      end
+      object Label1: TLabel
+        Left = 24
+        Height = 15
+        Top = 24
+        Width = 17
+        Caption = 'L ='
+        ParentColor = False
+      end
+      object FloatSpinEditU: TFloatSpinEdit
+        Left = 72
+        Height = 23
+        Top = 48
+        Width = 74
+        Increment = 1
+        MaxValue = 100
+        MinValue = 0
+        OnChange = Button1Click
+        TabOrder = 1
+        Value = 0.8
+      end
+      object Label2: TLabel
+        Left = 24
+        Height = 15
+        Top = 56
+        Width = 19
+        Caption = 'U ='
+        ParentColor = False
+      end
+      object Label3: TLabel
+        Left = 21
+        Height = 15
+        Top = 80
+        Width = 22
+        Caption = 'm ='
+        ParentColor = False
+      end
+      object Label4: TLabel
+        Left = 23
+        Height = 15
+        Top = 104
+        Width = 18
+        Caption = 'T ='
+        ParentColor = False
+      end
+      object Label5: TLabel
+        Left = 24
+        Height = 15
+        Top = 128
+        Width = 20
+        Caption = 'N ='
+        ParentColor = False
+      end
+      object FloatSpinEditm: TFloatSpinEdit
+        Left = 72
+        Height = 23
+        Top = 72
+        Width = 74
+        Increment = 0.01
+        MaxValue = 0
+        MinValue = 0
+        OnChange = Button1Click
+        TabOrder = 2
+        Value = 0.2
+      end
+      object FloatSpinEditT: TFloatSpinEdit
+        Left = 72
+        Height = 23
+        Top = 96
+        Width = 74
+        Increment = 1
+        MaxValue = 100
+        MinValue = 0
+        OnChange = Button1Click
+        TabOrder = 3
+        Value = 30
+      end
+      object SpinEditN: TSpinEdit
+        Left = 72
+        Height = 23
+        Top = 120
+        Width = 74
+        OnChange = Button1Click
+        TabOrder = 4
+        Value = 100
+      end
+      object Button1: TButton
+        Left = 32
+        Height = 41
+        Top = 224
+        Width = 96
+        Caption = 'Draw Graph'
+        OnClick = Button1Click
+        TabOrder = 5
+      end
+      object Label6: TLabel
+        Left = 24
+        Height = 15
+        Top = 148
+        Width = 26
+        Caption = 't10%'
+        ParentColor = False
+      end
+      object FloatSpinEditT90: TFloatSpinEdit
+        Left = 72
+        Height = 23
+        Top = 168
+        Width = 74
+        DecimalPlaces = 3
+        Increment = 0.001
+        MaxValue = 100
+        MinValue = 100
+        OnChange = Button1Click
+        TabOrder = 6
+        Value = 90
+      end
+      object FloatSpinEditT10: TFloatSpinEdit
+        Left = 70
+        Height = 23
+        Top = 144
+        Width = 74
+        DecimalPlaces = 3
+        Increment = 0.001
+        MaxValue = 1000
+        MinValue = -1000
+        OnChange = Button1Click
+        TabOrder = 7
+        Value = 100
+      end
+      object Label7: TLabel
+        Left = 24
+        Height = 15
+        Top = 176
+        Width = 26
+        Caption = 't90%'
+        ParentColor = False
+      end
+      object Label8: TLabel
+        Left = 24
+        Height = 15
+        Top = 200
+        Width = 31
+        Caption = 'Beta='
+        ParentColor = False
+      end
+      object FloatSpinEditbeta: TFloatSpinEdit
+        Left = 72
+        Height = 23
+        Top = 192
+        Width = 74
+        DecimalPlaces = 3
+        Increment = 0.001
+        MaxValue = 100
+        MinValue = 100
+        OnChange = Button1Click
+        TabOrder = 8
+        Value = 30
+      end
+      object Memo1: TMemo
+        Left = 16
+        Height = 90
+        Top = 272
+        Width = 150
+        Lines.Strings = (
+          'Memo1'
+        )
+        TabOrder = 9
+      end
+    end
+  end
+  object Timer1: TTimer
+    Interval = 1
+    OnTimer = Timer1Timer
+    left = 276
+    top = 118
+  end
+end
